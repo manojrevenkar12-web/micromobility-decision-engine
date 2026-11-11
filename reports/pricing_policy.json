@@ -1,0 +1,5 @@
+{
+ "weekday_offpeak": 1.0,
+ "weekday_peak": 1.0,
+ "weekend": 1.15
+}

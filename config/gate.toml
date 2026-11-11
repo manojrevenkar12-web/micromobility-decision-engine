@@ -1,0 +1,26 @@
+# What each component must show on the dev city before it may ship. A failed check holds the component
+# back; it is reported, never relaxed after the fact.
+
+[forecast]
+max_wape_vs_naive = 0.8          # corrected WAPE at most 80% of the censored model's
+max_abs_bias = 0.05
+
+[ops]
+# The planner replaces the heuristic only if its paired 95% interval of daily contribution is above zero.
+require_ci_above_zero = true
+
+[pricing]
+# A price policy ships only if a switchback confirms its uplift (95% interval above zero across seeds).
+require_confirmed_uplift = true
+# An experiment design is trusted only if its bias is within this share of the true effect.
+max_design_bias_share = 0.10
+
+[sensing]
+max_false_slowdowns_per_100km = 1.0
+min_sidewalk_caught_share = 0.85
+min_tandem_precision = 0.85
+min_int8_agreement = 0.99
+
+[causal]
+# Scored against the simulator's truth (evaluation only): the chosen estimator's 95% interval must cover it.
+must_cover_truth = true

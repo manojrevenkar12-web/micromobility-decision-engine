@@ -1,0 +1,42 @@
+{
+ "split": "dev-test",
+ "hardware": "gen6",
+ "train_loss": [
+  1.3200809167226155,
+  0.6275564578374226,
+  0.5894033292134603,
+  0.5300355618794759,
+  0.5031123310724894,
+  0.49157129621505735,
+  0.4552438457806905,
+  0.44665997139612834,
+  0.43235446866353355,
+  0.42044609602292377
+ ],
+ "slowdown_threshold": 0.63,
+ "tandem_threshold": 0.6300000000000001,
+ "windows": {
+  "surface_macro_f1": 0.9435849794622541,
+  "sidewalk_precision": 0.9646133682830931,
+  "sidewalk_recall": 0.8191430161380078,
+  "tandem_auroc": 0.985381882645422,
+  "tandem_precision": 0.9022457067371202,
+  "tandem_recall": 0.9034391534391535
+ },
+ "rides": {
+  "sidewalk_stretches": 476,
+  "caught_share": 0.9096638655462185,
+  "median_seconds_to_catch": 6.0,
+  "false_slowdowns_per_100km": 0.0,
+  "legal_km": 271.82055100798607,
+  "ride_tandem_auroc": 1.0
+ },
+ "edge": {
+  "params": 45188,
+  "onnx_kb": 177.6484375,
+  "int8_kb": 55.546875,
+  "float_ms_per_window": 0.08939152333368838,
+  "int8_ms_per_window": 0.06462217333364606,
+  "int8_top1_agreement": 0.998
+ }
+}

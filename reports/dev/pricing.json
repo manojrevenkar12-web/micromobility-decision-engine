@@ -1,0 +1,205 @@
+{
+ "city": "dev",
+ "design": {
+  "replications": [
+   {
+    "rep": 0,
+    "truth": 525.930811720028,
+    "truth_rides": -112.75,
+    "user_ab": 328.0893088614107,
+    "switchback": 583.8998425429463,
+    "user_ab_rides": -143.7989995208816,
+    "switchback_rides": -105.01011398298243,
+    "base_contribution": 4811.02312092656
+   },
+   {
+    "rep": 1,
+    "truth": 508.85406171124396,
+    "truth_rides": -114.42857142857156,
+    "user_ab": 391.0333090824584,
+    "switchback": 571.809853042616,
+    "user_ab_rides": -129.7731791004933,
+    "switchback_rides": -96.12886430198881,
+    "base_contribution": 4778.508826199554
+   },
+   {
+    "rep": 2,
+    "truth": 495.7861485769117,
+    "truth_rides": -113.03571428571445,
+    "user_ab": 381.1334389457626,
+    "switchback": 610.8823577751056,
+    "user_ab_rides": -131.05793427737655,
+    "switchback_rides": -85.72343723092752,
+    "base_contribution": 4714.1370958613315
+   },
+   {
+    "rep": 3,
+    "truth": 514.8119851077499,
+    "truth_rides": -113.42857142857133,
+    "user_ab": 414.90924779416423,
+    "switchback": 438.8401187238199,
+    "user_ab_rides": -137.30191551855393,
+    "switchback_rides": -139.57589429584255,
+    "base_contribution": 4780.57153469831
+   },
+   {
+    "rep": 4,
+    "truth": 509.13683587782725,
+    "truth_rides": -113.85714285714266,
+    "user_ab": 409.4757609812393,
+    "switchback": 403.0213804880092,
+    "user_ab_rides": -130.34964910842533,
+    "switchback_rides": -129.02206483246792,
+    "base_contribution": 4727.8958348085725
+   },
+   {
+    "rep": 5,
+    "truth": 502.5133892722006,
+    "truth_rides": -114.5,
+    "user_ab": 324.088646773155,
+    "switchback": 401.00813642746425,
+    "user_ab_rides": -147.40646804751455,
+    "switchback_rides": -125.05248125669527,
+    "base_contribution": 4740.159133632477
+   },
+   {
+    "rep": 6,
+    "truth": 513.879582582811,
+    "truth_rides": -114.14285714285734,
+    "user_ab": 416.16752394149256,
+    "switchback": 96.2260462501482,
+    "user_ab_rides": -125.34516630711705,
+    "switchback_rides": -211.1538915790734,
+    "base_contribution": 4826.431948079325
+   },
+   {
+    "rep": 7,
+    "truth": 466.3776169766061,
+    "truth_rides": -119.03571428571445,
+    "user_ab": 328.68115675934007,
+    "switchback": 828.9682486543104,
+    "user_ab_rides": -139.32715640668096,
+    "switchback_rides": -46.68302691394592,
+    "base_contribution": 4738.5393608095865
+   },
+   {
+    "rep": 8,
+    "truth": 525.210044917002,
+    "truth_rides": -111.67857142857156,
+    "user_ab": 336.51702009638404,
+    "switchback": 671.2846392583156,
+    "user_ab_rides": -144.95029736895285,
+    "switchback_rides": -83.1138107416864,
+    "base_contribution": 4776.775357274971
+   },
+   {
+    "rep": 9,
+    "truth": 532.0722119682432,
+    "truth_rides": -107.14285714285711,
+    "user_ab": 468.90113189331146,
+    "switchback": 385.0221232423912,
+    "user_ab_rides": -125.12223669498125,
+    "switchback_rides": -127.47006572395853,
+    "base_contribution": 4754.723824871947
+   }
+  ],
+  "test_multiplier": 1.2,
+  "days": 28,
+  "user_ab": {
+   "bias": -129.55761435819056,
+   "sd": 49.17891089903116,
+   "rmse": 136.38919087352676,
+   "sign_correct": 1.0
+  },
+  "switchback": {
+   "bias": -10.360994230549721,
+   "sd": 200.34392527628535,
+   "rmse": 199.19198442103487,
+   "sign_correct": 1.0
+  },
+  "truth": {
+   "mean": 509.4572688710624,
+   "sd": 18.76945805317333,
+   "relative": 0.10691929954150799
+  }
+ },
+ "elasticity_table": {
+  "weekday_offpeak": {
+   "0.9": {
+    "contribution_per_hour": 126.59673957878994,
+    "rides_per_hour": 31.009437097930604
+   },
+   "1.0": {
+    "contribution_per_hour": 154.32779761904763,
+    "rides_per_hour": 33.54761904761905
+   },
+   "1.15": {
+    "contribution_per_hour": 149.75122704518816,
+    "rides_per_hour": 27.87826566059618
+   },
+   "1.3": {
+    "contribution_per_hour": 166.10842908367337,
+    "rides_per_hour": 26.897488684863724
+   }
+  },
+  "weekday_peak": {
+   "0.9": {
+    "contribution_per_hour": 330.0973444696985,
+    "rides_per_hour": 84.70477589806244
+   },
+   "1.0": {
+    "contribution_per_hour": 428.14340370370365,
+    "rides_per_hour": 93.07407407407408
+   },
+   "1.15": {
+    "contribution_per_hour": 383.1453087888523,
+    "rides_per_hour": 74.17177995467657
+   },
+   "1.3": {
+    "contribution_per_hour": 451.42830156728695,
+    "rides_per_hour": 75.32200981294335
+   }
+  },
+  "weekend": {
+   "0.9": {
+    "contribution_per_hour": 174.0576467597986,
+    "rides_per_hour": 42.96918080192521
+   },
+   "1.0": {
+    "contribution_per_hour": 192.42205454545459,
+    "rides_per_hour": 42.42424242424242
+   },
+   "1.15": {
+    "contribution_per_hour": 218.625106779887,
+    "rides_per_hour": 41.944214888494166
+   },
+   "1.3": {
+    "contribution_per_hour": 194.33009702339518,
+    "rides_per_hour": 34.39627818312567
+   }
+  }
+ },
+ "policy": {
+  "weekday_offpeak": 1.0,
+  "weekday_peak": 1.0,
+  "weekend": 1.15
+ },
+ "validation": {
+  "true_uplift_per_day": 83.36428608039932,
+  "true_uplift_relative": 0.01853693715635657,
+  "true_rides_change": -0.022484014734450164,
+  "switchback_estimate_per_day": -6.684674246170772,
+  "per_seed": {
+   "true": [
+    89.2431167521363,
+    83.12456361546356,
+    77.72517787359811
+   ],
+   "switchback": [
+    -126.65094783731575,
+    284.0553727221654,
+    -177.45844762336193
+   ]
+  }
+ }
+}

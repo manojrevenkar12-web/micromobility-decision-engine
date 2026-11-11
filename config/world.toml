@@ -1,0 +1,77 @@
+# The simulated cities. Everything here is the hidden truth: only src/mde/world reads it.
+# Decision code sees the logs the simulator writes (app opens, rides, vehicle states, ops actions).
+
+[season]
+start = "2025-04-01"
+history_end = "2025-06-30"     # logs the models learn from (operated by the status-quo heuristic)
+end = "2025-08-31"             # Jul-Aug: policies are compared here
+
+[cities.dev]
+seed = 11
+grid = 12                      # 12 x 12 zones of 500 m
+fleet = 1200
+center = [5.5, 6.0]
+campus = [[2, 9]]
+stations = [[6, 2], [9, 8], [3, 4]]
+parks = [[8, 10], [10, 3]]
+demand_scale = 1.0
+
+[cities.heldout]
+# A second city never used while building anything; scored once (docs/heldout.md).
+seed = 47
+grid = 12
+fleet = 1100
+center = [6.5, 5.0]
+campus = [[9, 2]]
+stations = [[5, 9], [2, 6], [8, 4]]
+parks = [[3, 2], [10, 9]]
+demand_scale = 0.95
+
+[zones]
+# Intents (people who would ride if a scooter were near and the price acceptable) per zone-hour at peak.
+base_rate = { center = 5.0, mixed = 2.4, residential = 0.9, campus = 3.6, station = 4.2, park = 1.6 }
+center_radius = 2.2
+mixed_radius = 4.0
+
+[time]
+season_factor = { "4" = 0.70, "5" = 0.90, "6" = 1.00, "7" = 1.05, "8" = 1.00, "9" = 0.90, "10" = 0.65 }
+rain_day_prob = 0.28
+rain_factor = 0.45
+hot_threshold_c = 27.0
+
+[riders]
+# Price acceptance: P(ride | price multiplier m) = sigmoid(a - b * ln m); commuters are less price-sensitive.
+accept_a = 0.85
+commuter_b = 1.0
+leisure_b = 2.6
+walk_to_neighbour_prob = 0.35
+open_if_none_prob = 0.8        # a person who finds no scooter still opens the app with this probability
+
+[trips]
+mean_km_decay = 1.8            # gravity model: P(dest) ~ attraction * exp(-km / decay)
+speed_kmh = 13.0
+unlock_eur = 1.0
+per_min_eur = 0.25
+variable_cost_per_ride_eur = 0.35
+battery_pct_per_km = 2.2
+min_rentable_battery = 15.0
+
+[ops]
+night_hour = 2
+midday_hour = 12
+swaps_per_night = 55
+swaps_midday = 25
+moves_per_night = 90
+moves_midday = 40
+swap_cost_eur = 2.6
+move_cost_eur = 2.1
+
+[events.competitor]
+# From this date a competitor launches in the eastern third of the dev city: true demand there falls.
+city = "dev"
+start = "2025-06-16"
+x_from = 8
+effect = -0.18
+
+[pricing]
+base_multiplier = 1.0

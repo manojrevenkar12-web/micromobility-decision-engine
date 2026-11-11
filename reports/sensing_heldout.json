@@ -1,0 +1,21 @@
+{
+ "split": "heldout",
+ "hardware": "gen7",
+ "slowdown_threshold": 0.63,
+ "windows": {
+  "surface_macro_f1": 0.8658347051371219,
+  "sidewalk_precision": 0.8599852616064849,
+  "sidewalk_recall": 0.6483333333333333,
+  "tandem_auroc": 0.9843181983579334,
+  "tandem_precision": 0.9212827988338192,
+  "tandem_recall": 0.8839160839160839
+ },
+ "rides": {
+  "sidewalk_stretches": 446,
+  "caught_share": 0.6771300448430493,
+  "median_seconds_to_catch": 10.0,
+  "false_slowdowns_per_100km": 0.0,
+  "legal_km": 274.02637737989426,
+  "ride_tandem_auroc": 1.0
+ }
+}

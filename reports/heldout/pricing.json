@@ -1,0 +1,26 @@
+{
+ "city": "heldout",
+ "policy": {
+  "weekday_offpeak": 1.0,
+  "weekday_peak": 1.0,
+  "weekend": 1.15
+ },
+ "validation": {
+  "true_uplift_per_day": 91.1789621048941,
+  "true_uplift_relative": 0.018763516345133777,
+  "true_rides_change": -0.02107075517342538,
+  "switchback_estimate_per_day": -139.87388871727381,
+  "per_seed": {
+   "true": [
+    79.00667559890371,
+    94.84742191175701,
+    99.68278880402158
+   ],
+   "switchback": [
+    -229.68718592159397,
+    21.687558564995896,
+    -211.62203879522338
+   ]
+  }
+ }
+}

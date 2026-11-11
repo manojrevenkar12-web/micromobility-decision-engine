@@ -1,0 +1,22 @@
+{
+ "checks": {
+  "forecast: corrected WAPE <= 0.8 x censored": true,
+  "forecast: |bias| <= 5%": true,
+  "ops: planner beats heuristic (95% interval above zero)": false,
+  "pricing: switchback bias within 10% of the true effect": true,
+  "pricing: rider A/B bias within 10% of the true effect": false,
+  "pricing: policy uplift confirmed by switchback": false,
+  "sensing: false slowdowns <= 1 per 100 km": true,
+  "sensing: sidewalk stretches caught >= 85%": true,
+  "sensing: tandem precision >= 0.85": true,
+  "sensing: int8 agrees with float >= 99%": true,
+  "causal: DiD on corrected demand covers the truth": true
+ },
+ "decisions": {
+  "forecast": "ship",
+  "ops planner": "hold: keep the heuristic",
+  "pricing design": "switchback",
+  "pricing policy": "hold: run the switchback longer",
+  "sensing model": "ship"
+ }
+}
