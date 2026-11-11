@@ -13,11 +13,11 @@ from __future__ import annotations
 import hashlib
 import sys
 
+from mde import config
+
 import ops_eval
 import pricing_eval
 import sensing_eval
-
-from mde import config
 
 LOCK = config.CONFIG / "heldout.lock"
 FILES = [config.CONFIG / "world.toml", config.ROOT / "src" / "mde" / "world" / "imu.py"]

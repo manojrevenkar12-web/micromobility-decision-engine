@@ -25,3 +25,7 @@ select = ["E", "F", "I", "W", "B", "UP"]
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 pythonpath = ["src"]
+
+[tool.ruff.lint.isort]
+known-first-party = ["mde"]
+known-local-folder = ["ops_eval", "pricing_eval", "sensing_eval"]

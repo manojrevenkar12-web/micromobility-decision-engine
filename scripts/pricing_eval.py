@@ -21,7 +21,6 @@ from datetime import date
 
 import numpy as np
 import pandas as pd
-from ops_eval import HISTORY_SEED, copy_logs
 
 from mde import config
 from mde.ops.policies import Heuristic
@@ -36,6 +35,8 @@ from mde.pricing.experiments import (
 from mde.pricing.policy import BandPolicy, band_of, choose_levels
 from mde.world.city import build
 from mde.world.sim import base_price, run
+
+from ops_eval import HISTORY_SEED, copy_logs
 
 
 def setup(name: str):

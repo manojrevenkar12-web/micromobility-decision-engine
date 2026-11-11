@@ -15,6 +15,7 @@ from mde import config
 from mde.ops.policies import Heuristic
 from mde.world.city import build
 from mde.world.sim import run
+
 from ops_eval import HISTORY_SEED, copy_logs
 
 R = config.REPORTS
@@ -107,7 +108,8 @@ def tables(s) -> None:
         print(f"\n### Competitor launch (truth {c['truth']:+.0%})\n")
         for y in ("rides", "demand_corrected"):
             dd = c[y]["did"]
-            print(f"- {y}: naive pre/post {c[y]['naive_pre_post']:+.1%}; DiD {dd['effect']:+.1%} ({dd['lo']:+.1%} to {dd['hi']:+.1%})")
+            print(f"- {y}: naive pre/post {c[y]['naive_pre_post']:+.1%}; "
+                  f"DiD {dd['effect']:+.1%} ({dd['lo']:+.1%} to {dd['hi']:+.1%})")
     for split in ("dev", "heldout"):
         x = s["sensing"][split]
         if x:
